@@ -1,9 +1,10 @@
 <section>
+  <h5>{{ listName }}</h5>
   <ul>
     @for (game of games; track game._id) {
     <li>
       <div>
-        <p>Juego :{{ game.name }}</p>
+        <p (click)="favGame(game.name)">Juego :{{ game.name }}</p>
         <p>Año de liveracion: {{ game.year }}</p>
       </div>
     </li>

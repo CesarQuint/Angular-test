@@ -9,5 +9,14 @@ import { GameListComponent } from '../game-list/game-list.component';
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  logedIn = true;
+  logedIn = false;
+  greet() {
+    alert('Hola!!');
+  }
+
+  favGameName = '';
+
+  getFavorite(gameName: string) {
+    this.favGameName = gameName;
+  }
 }

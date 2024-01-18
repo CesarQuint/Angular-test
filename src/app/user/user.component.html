@@ -1,9 +1,19 @@
 <p>user works!</p>
 @if(logedIn){
 <p>Hola Cesar</p>
-<img src="https://github.com/cesarQuint.png" alt="" srcset="" />
+<img
+  (click)="greet()"
+  src="https://github.com/cesarQuint.png"
+  alt=""
+  srcset="" />
 }@else{
-<p>Inisiar secion</p>
+<button type="submit" (click)="logedIn = true">Inisiar sesion</button>
 }
 <br />
-<app-game-list></app-game-list>
+<app-game-list
+  (addFavoriteEvent)="getFavorite($event)"
+  listName="Game of Exodo"></app-game-list>
+
+@if(favGameName !== ''){
+<h3>Tu juego favorito es {{ favGameName }}</h3>
+}
