@@ -1,0 +1,12 @@
+<section>
+  <ul>
+    @for (game of games; track game._id) {
+    <li>
+      <div>
+        <p>Juego :{{ game.name }}</p>
+        <p>Año de liveracion: {{ game.year }}</p>
+      </div>
+    </li>
+    }
+  </ul>
+</section>
